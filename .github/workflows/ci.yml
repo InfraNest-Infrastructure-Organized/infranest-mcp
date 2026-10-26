@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    # Weekly, so a tool added or renamed on the server is noticed even when nothing here changes.
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: The files agree with each other, the registry's schema and the live server
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet 'jsonschema==4.25.1'
+          .venv/bin/python scripts/check.py --live

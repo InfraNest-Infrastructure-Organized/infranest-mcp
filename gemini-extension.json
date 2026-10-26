@@ -1,0 +1,11 @@
+{
+  "name": "infranest",
+  "version": "1.0.0",
+  "description": "Read your servers, uptime monitors, incidents, DNS, domains and certificates in InfraNest.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "infranest": {
+      "httpUrl": "https://api.infranest.io/mcp"
+    }
+  }
+}
