@@ -1,7 +1,7 @@
 {
   "name": "infranest",
-  "version": "1.0.0",
-  "description": "Read your servers, uptime monitors, incidents, DNS, domains and certificates in InfraNest.",
+  "version": "1.1.0",
+  "description": "Your servers, monitors, incidents, DNS, domains and certificates in InfraNest, in your AI assistant.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "infranest": {

@@ -9,13 +9,13 @@
 
 <p align="center">
   <strong>Ask your AI assistant about your infrastructure.</strong><br>
-  What is down, where a hostname points, what expires soon, who changed what. Read-only, hosted, nothing to install.
+  What is down, where a hostname points, what expires soon, who changed what. Hosted, nothing to install.
 </p>
 
 <p align="center">
   <a href="https://github.com/InfraNest-Infrastructure-Organized/infranest-mcp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/InfraNest-Infrastructure-Organized/infranest-mcp/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="MCP: streamable HTTP" src="https://img.shields.io/badge/MCP-streamable%20HTTP-6E56CF">
-  <img alt="Access: read-only" src="https://img.shields.io/badge/access-read--only-brightgreen">
+  <img alt="Access: reads, on-call actions only when allowed" src="https://img.shields.io/badge/access-reads%20%2B%20on--call%20actions%20when%20allowed-brightgreen">
   <img alt="Licence: Apache-2.0" src="https://img.shields.io/badge/licence-Apache--2.0-blue">
 </p>
 
@@ -34,8 +34,12 @@ https://api.infranest.io/mcp
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_InfraNest-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=infranest&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.infranest.io%2Fmcp%22%7D)
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=infranest&config=eyJ1cmwiOiJodHRwczovL2FwaS5pbmZyYW5lc3QuaW8vbWNwIn0=)
 
-**Read-only.** It cannot create, change or delete anything, and it never returns secrets such as domain
-transfer codes, private keys or tokens. Works on every InfraNest plan, including Free.
+**It reads, and changes only what you allow.** Every tool reads, except a small on-call set — acknowledge an
+incident, leave the team a note, silence a monitor, check a monitor again, start or end a maintenance window —
+which needs write access to Monitoring: an API token with Monitoring write, or **Also let it act** ticked when you
+connect. Each of those changes is undone by another, is recorded in your audit log, and your assistant asks before
+making it. Nothing else can be created, changed or deleted, and it never returns secrets such as domain transfer
+codes, private keys or tokens. Works on every InfraNest plan, including Free.
 
 ## Connect
 
@@ -77,21 +81,47 @@ Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](h
 |---|---|
 | `list_organizations` | Which organizations you can read |
 | `status_overview` | Is everything up right now — monitors, servers, open incidents, running maintenance |
+| `status_across_organizations` | Is anything down in any of your organizations, one line each |
+| `search`, `fetch` | Find anything by name, then read the one you mean in full |
 | `list_servers`, `get_server` | Your cloud servers, filtered by state, provider or tag |
 | `server_attention` | What needs attention on a server |
-| `server_metrics` | Servers with their latest CPU, memory and disk figures |
+| `server_metrics`, `server_metric_history` | Servers with their latest CPU, memory and disk figures, and one server's over time |
 | `list_monitors`, `get_monitor` | Your uptime monitors |
-| `monitor_stats` | Uptime and response times of a monitor |
-| `monitor_results` | Recent check results of a monitor |
+| `monitor_stats`, `monitor_results` | Uptime and response times of a monitor, and its recent check results |
 | `list_incidents`, `incident_timeline` | Incidents and what happened during each |
+| `list_deploys`, `deploy_changes` | Deploys to a monitor or server, and what each changed |
 | `list_dns_zones`, `list_dns_records` | DNS zones and their records |
-| `search_dns` | Where a hostname points, across all zones |
-| `list_domains` | Domains, with expiry and renewal state |
+| `search_dns`, `check_dns_name` | Where a hostname points across all zones, and everything about one name, live DNS included |
+| `dns_zone_changes`, `dns_outside_changes` | Recent changes to a zone, in InfraNest and made directly at the DNS provider |
+| `list_domains`, `domain_findings` | Domains with expiry and renewal state, and what is wrong with any of them, in one call |
 | `list_certificates` | Certificates, with expiry |
+| `list_status_pages` | Your public status pages |
+| `list_dynamic_ips` | Dynamic IPs and the records they keep up to date |
 | `list_maintenance_windows` | Planned maintenance |
 | `search_audit_log` | Who changed what, and when |
 | `uptime_report` | Monthly uptime report |
 | `read_api` | Any other read in the [public API](https://developers.infranest.io/reference) |
+
+**On-call actions**, only with write access to Monitoring:
+
+| Tool | What it does | Undone by |
+|---|---|---|
+| `acknowledge_incident`, `unacknowledge_incident` | Marks an incident as yours, stopping repeat alerts and telling the team | each other |
+| `add_incident_note` | Leaves the team a note on an incident | — |
+| `silence_monitor`, `unsilence_monitor` | Stops a monitor's alerts for a while; it keeps checking | each other |
+| `run_monitor_check` | Checks a monitor again now instead of waiting for its schedule | — |
+| `start_maintenance`, `end_maintenance` | Opens a maintenance window, so nobody is paged for planned work, and ends it. It is internal unless given a public notice, the text your status pages show | each other |
+
+## Prompts
+
+Ready-made questions in your assistant's prompt menu:
+
+| Prompt | What you get |
+|---|---|
+| Health check (`health_check`) | What is down now and what needs attention this month: incidents, servers, domains, certificates, DNS |
+| Investigate an incident (`investigate_incident`) | Why something is down: the incident, what it affects, what changed just before it, what to do next |
+| What changed recently (`what_changed`) | Everything that changed in a period: settings, deploys, DNS edits in InfraNest and at the provider |
+| Monthly uptime report (`monthly_report`) | A report fit to send a customer: uptime against target, each incident with its cause, planned maintenance |
 
 ## What is in this repository
 
