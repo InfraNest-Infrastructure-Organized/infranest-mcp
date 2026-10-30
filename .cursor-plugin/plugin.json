@@ -1,0 +1,26 @@
+{
+  "name": "InfraNest",
+  "description": "InfraNest watches your websites, servers, domains and SSL certificates. Connect it to Claude, ChatGPT or Cursor and ask what is down or about to expire.",
+  "version": "1.1.0",
+  "author": {
+    "name": "InfraNest",
+    "url": "https://infranest.io",
+    "avatar": "https://app.infranest.io/android-chrome-512x512.png"
+  },
+  "homepage": "https://infranest.io",
+  "repository": "https://github.com/InfraNest-Infrastructure-Organized/infranest-mcp",
+  "license": "Apache-2.0",
+  "logo": "https://app.infranest.io/android-chrome-512x512.png",
+  "keywords": [
+    "monitoring",
+    "uptime",
+    "incidents",
+    "dns",
+    "domains",
+    "ssl",
+    "certificates",
+    "devops",
+    "sre",
+    "infrastructure"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "infranest": {
+      "url": "https://api.infranest.io/mcp"
+    }
+  }
+}
