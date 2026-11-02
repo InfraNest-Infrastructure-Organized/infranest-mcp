@@ -48,8 +48,8 @@ connector with the URL above, or use a button above. You sign in with your Infra
 organization it may use; it sees only what your role there allows. Remove it any time under
 **My account → Authorized apps**.
 
-**Assistants that take a header instead** — create an API token in InfraNest (**My account → Developer**) and
-send it as a bearer token:
+**Assistants that take a header instead** — on a plan that includes API tokens (Pro and up), create one in InfraNest
+(**My account → Developer**) and send it as a bearer token:
 
 ```json
 {
@@ -83,7 +83,7 @@ Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](h
 | `status_overview` | Is everything up right now — monitors, servers, open incidents, running maintenance |
 | `status_across_organizations` | Is anything down in any of your organizations, one line each |
 | `search`, `fetch` | Find anything by name, then read the one you mean in full |
-| `list_servers`, `get_server` | Your cloud servers, filtered by state, provider or tag |
+| `list_servers`, `get_server` | Your servers, cloud and self-managed, filtered by state, provider or tag |
 | `server_attention` | What needs attention on a server |
 | `server_metrics`, `server_metric_history` | Servers with their latest CPU, memory and disk figures, and one server's over time |
 | `list_monitors`, `get_monitor` | Your uptime monitors |
@@ -108,6 +108,7 @@ Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](h
 |---|---|---|
 | `acknowledge_incident`, `unacknowledge_incident` | Marks an incident as yours, stopping repeat alerts and telling the team | each other |
 | `add_incident_note` | Leaves the team a note on an incident | — |
+| `create_incident_ticket` | Files an incident in your connected Jira, Linear or GitHub and returns the issue's key and link; an incident that already has one keeps it | — |
 | `silence_monitor`, `unsilence_monitor` | Stops a monitor's alerts for a while; it keeps checking | each other |
 | `run_monitor_check` | Checks a monitor again now instead of waiting for its schedule | — |
 | `start_maintenance`, `end_maintenance` | Opens a maintenance window, so nobody is paged for planned work, and ends it. It is internal unless given a public notice, the text your status pages show | each other |

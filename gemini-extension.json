@@ -1,7 +1,7 @@
 {
   "name": "infranest",
-  "version": "1.1.0",
-  "description": "Your servers, monitors, incidents, DNS, domains and certificates in InfraNest, in your AI assistant.",
+  "version": "1.1.1",
+  "description": "Monitor websites, servers, domains and SSL with InfraNest, and ask your AI assistant what is down.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "infranest": {

@@ -2,13 +2,25 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.infranest/infranest",
   "title": "InfraNest",
-  "description": "Your servers, monitors, incidents, DNS, domains and certificates in InfraNest, in your AI assistant.",
+  "description": "Monitor websites, servers, domains and SSL with InfraNest, and ask your AI assistant what is down.",
   "websiteUrl": "https://infranest.io",
+  "icons": [
+    {
+      "src": "https://app.infranest.io/android-chrome-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    },
+    {
+      "src": "https://app.infranest.io/android-chrome-192x192.png",
+      "mimeType": "image/png",
+      "sizes": ["192x192"]
+    }
+  ],
   "repository": {
     "url": "https://github.com/InfraNest-Infrastructure-Organized/infranest-mcp",
     "source": "github"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "remotes": [
     {
       "type": "streamable-http",
