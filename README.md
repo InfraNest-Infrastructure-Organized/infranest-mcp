@@ -142,6 +142,8 @@ checks the tool table above against the tools the live server describes.
 
 - [Use InfraNest from an AI assistant](https://developers.infranest.io/ai-assistants), on the developer site, and
   the same in the [help center](https://infranest.io/docs/ai-assistants/)
+- [Ask your AI assistant what broke](https://infranest.io/blog/ask-claude-chatgpt-about-your-infrastructure/): five
+  everyday examples, from a site that is down to a client asking for an uptime report
 - [Developer documentation](https://developers.infranest.io) and the [API reference](https://developers.infranest.io/reference)
 - [infranest-openapi](https://github.com/InfraNest-Infrastructure-Organized/infranest-openapi): the API description
 - [infranest-examples](https://github.com/InfraNest-Infrastructure-Organized/infranest-examples): ready-to-run scripts for the API
