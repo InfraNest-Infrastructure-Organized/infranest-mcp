@@ -1,7 +1,7 @@
 {
   "name": "InfraNest",
   "description": "InfraNest watches your websites, servers, domains and SSL certificates. Connect it to Claude, ChatGPT or Cursor and ask what is down or about to expire.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "InfraNest",
     "url": "https://infranest.io",
