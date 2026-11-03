@@ -1,0 +1,3 @@
+# The repository is a hosted MCP server's manifests; scripts/ only checks them in CI.
+# Without this GitHub reports it as a Python project, and directories copy that label.
+scripts/** linguist-detectable=false
