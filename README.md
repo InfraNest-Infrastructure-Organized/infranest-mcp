@@ -71,9 +71,9 @@ gemini extensions install https://github.com/InfraNest-Infrastructure-Organized/
 Gemini CLI opens the InfraNest sign-in the first time a tool is used.
 
 No account yet? Sign up free at [infranest.io](https://infranest.io/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp). A
-[sandbox](https://developers.infranest.io/sandbox) with sample data lets you try every tool safely.
+[sandbox](https://developers.infranest.io/sandbox?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) with sample data lets you try every tool safely.
 
-Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](https://developers.infranest.io/ai-assistants).
+Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](https://developers.infranest.io/ai-assistants?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp).
 
 ## Tools
 
@@ -100,7 +100,7 @@ Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](h
 | `list_maintenance_windows` | Planned maintenance |
 | `search_audit_log` | Who changed what, and when |
 | `uptime_report` | Monthly uptime report |
-| `read_api` | Any other read in the [public API](https://developers.infranest.io/reference) |
+| `read_api` | Any other read in the [public API](https://developers.infranest.io/reference?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) |
 
 **On-call actions**, only with write access to Monitoring:
 
@@ -140,11 +140,11 @@ checks the tool table above against the tools the live server describes.
 
 ## Links
 
-- [Use InfraNest from an AI assistant](https://developers.infranest.io/ai-assistants), on the developer site, and
+- [Use InfraNest from an AI assistant](https://developers.infranest.io/ai-assistants?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp), on the developer site, and
   the same in the [help center](https://infranest.io/docs/ai-assistants/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp)
 - [Ask your AI assistant what broke](https://infranest.io/blog/ask-claude-chatgpt-about-your-infrastructure/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp): five
   everyday examples, from a site that is down to a client asking for an uptime report
-- [Developer documentation](https://developers.infranest.io) and the [API reference](https://developers.infranest.io/reference)
+- [Developer documentation](https://developers.infranest.io/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) and the [API reference](https://developers.infranest.io/reference?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp)
 - [infranest-openapi](https://github.com/InfraNest-Infrastructure-Organized/infranest-openapi): the API description
 - [infranest-examples](https://github.com/InfraNest-Infrastructure-Organized/infranest-examples): ready-to-run scripts for the API
 - [Service status](https://status.infranest.io)
