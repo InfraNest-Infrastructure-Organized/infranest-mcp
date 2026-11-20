@@ -21,7 +21,7 @@
 
 ---
 
-[InfraNest](https://infranest.io) is one place for your servers, uptime monitors, incidents, DNS, domains and
+[InfraNest](https://infranest.io/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) is one place for your servers, uptime monitors, incidents, DNS, domains and
 certificates, across the cloud and DNS providers you already use. This is its hosted
 [Model Context Protocol](https://modelcontextprotocol.io) server. Ask in plain language: what is down right now,
 which monitors failed last night, where a hostname points, which domains and certificates expire soon, which
@@ -70,10 +70,10 @@ gemini extensions install https://github.com/InfraNest-Infrastructure-Organized/
 
 Gemini CLI opens the InfraNest sign-in the first time a tool is used.
 
-No account yet? Sign up free at [infranest.io](https://infranest.io). A
-[sandbox](https://developers.infranest.io/sandbox) with sample data lets you try every tool safely.
+No account yet? Sign up free at [infranest.io](https://infranest.io/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp). A
+[sandbox](https://developers.infranest.io/sandbox?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) with sample data lets you try every tool safely.
 
-Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](https://developers.infranest.io/ai-assistants).
+Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](https://developers.infranest.io/ai-assistants?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp).
 
 ## Tools
 
@@ -100,7 +100,7 @@ Step-by-step setup for each assistant: [developers.infranest.io/ai-assistants](h
 | `list_maintenance_windows` | Planned maintenance |
 | `search_audit_log` | Who changed what, and when |
 | `uptime_report` | Monthly uptime report |
-| `read_api` | Any other read in the [public API](https://developers.infranest.io/reference) |
+| `read_api` | Any other read in the [public API](https://developers.infranest.io/reference?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) |
 
 **On-call actions**, only with write access to Monitoring:
 
@@ -140,21 +140,21 @@ checks the tool table above against the tools the live server describes.
 
 ## Links
 
-- [Use InfraNest from an AI assistant](https://developers.infranest.io/ai-assistants), on the developer site, and
-  the same in the [help center](https://infranest.io/docs/ai-assistants/)
-- [Ask your AI assistant what broke](https://infranest.io/blog/ask-claude-chatgpt-about-your-infrastructure/): five
+- [Use InfraNest from an AI assistant](https://developers.infranest.io/ai-assistants?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp), on the developer site, and
+  the same in the [help center](https://infranest.io/docs/ai-assistants/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp)
+- [Ask your AI assistant what broke](https://infranest.io/blog/ask-claude-chatgpt-about-your-infrastructure/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp): five
   everyday examples, from a site that is down to a client asking for an uptime report
-- [Developer documentation](https://developers.infranest.io) and the [API reference](https://developers.infranest.io/reference)
+- [Developer documentation](https://developers.infranest.io/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) and the [API reference](https://developers.infranest.io/reference?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp)
 - [infranest-openapi](https://github.com/InfraNest-Infrastructure-Organized/infranest-openapi): the API description
 - [infranest-examples](https://github.com/InfraNest-Infrastructure-Organized/infranest-examples): ready-to-run scripts for the API
 - [Service status](https://status.infranest.io)
-- [Privacy policy](https://infranest.io/privacy) · [Terms of Service](https://infranest.io/terms)
+- [Privacy policy](https://infranest.io/privacy/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp) · [Terms of Service](https://infranest.io/terms/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp)
 
 Found a problem? Open an [issue](https://github.com/InfraNest-Infrastructure-Organized/infranest-mcp/issues), or
 write to support@infranest.io. For a security issue in InfraNest, see
-[infranest.io/security](https://infranest.io/security).
+[infranest.io/security](https://infranest.io/security/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp).
 
 ## Licence
 
 The files in this repository are under the [Apache License 2.0](LICENSE). Your use of InfraNest is governed by its
-[Terms of Service](https://infranest.io/terms).
+[Terms of Service](https://infranest.io/terms/?utm_source=github&utm_medium=readme&utm_campaign=infranest-mcp).
